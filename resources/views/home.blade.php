@@ -7,7 +7,7 @@
             <img class="rounded-circle " src="/svg/profile_image.jpg" alt="profile_image">
         </div>
         <div class="col-9 pt-5">
-            <div><h1>wetaaaaas</h1></div>
+            <div><h1>{{$user->username}}</h1></div>
             <div class="d-flex">
                 <div class="pr-5"><strong>0</strong> posts</div>
                 <div class="pr-5"><strong>207</strong> followers</div>
