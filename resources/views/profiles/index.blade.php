@@ -7,18 +7,18 @@
             <img class="rounded-circle " src="/svg/profile_image.jpg" alt="profile_image">
         </div>
         <div class="col-9 pt-5">
-            <div><h1>{{$user->username}}</h1></div>
+            <div class="d-flex justify-content-between align-items-baseline">
+                <h1>{{$user->username}}</h1>
+                <a href="#">Add New Post</a>
+            </div>
             <div class="d-flex">
                 <div class="pr-5"><strong>0</strong> posts</div>
                 <div class="pr-5"><strong>207</strong> followers</div>
                 <div class="pr-5"><strong>1,248</strong> following</div>
             </div>
-            <div class="pt-4 font-weight-bold">Saad Wetas</div>
-            <div>
-                Software engineer <br>
-                Rabat 🇲🇦 <br>
-                - The best things come from living outside of your comfort zone.
-            </div>
+            <div class="pt-4 font-weight-bold">{{ $user->profile->title }}</div>
+            <div>{{ $user->profile->description }}</div>
+            <div><a href="#">{{ $user->profile->url ?? 'N/A'}}</a></div>
         </div>
     </div>
 
