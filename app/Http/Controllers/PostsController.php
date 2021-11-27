@@ -42,9 +42,11 @@ class PostsController extends Controller
     }
 
 
-    public function show($post) {
+    public function show(\App\Models\Post $post) {
 
         // dd($post);
-        return view('posts.show');
+        return view('posts.show', [
+            'post' => $post,
+        ]);
     }
 }
