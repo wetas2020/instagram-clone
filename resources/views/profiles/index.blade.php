@@ -9,10 +9,10 @@
         <div class="col-9 pt-5">
             <div class="d-flex justify-content-between align-items-baseline">
                 <h1>{{$user->username}}</h1>
-                <a href="#">Add New Post</a>
+                <a href="/post/create">Add New Post</a>
             </div>
             <div class="d-flex">
-                <div class="pr-5"><strong>0</strong> posts</div>
+                <div class="pr-5"><strong>{{ $user->posts->count() }}</strong> posts</div>
                 <div class="pr-5"><strong>207</strong> followers</div>
                 <div class="pr-5"><strong>1,248</strong> following</div>
             </div>
@@ -23,15 +23,13 @@
     </div>
 
     <div class="row pt-5">
-        <div class="col-4">
-            <img class="w-100" src="https://images.unsplash.com/photo-1633114128174-2f8aa49759b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="unsplash image">
+       @foreach ($user->posts as $post)
+        <div class="col-4 pb-4">
+            <img class="w-100" src="/storage/{{ $post->image }}" alt="unsplash image">
         </div>
-        <div class="col-4">
-            <img class="w-100" src="https://images.unsplash.com/photo-1633114072460-c7dd0b7c6161?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="unsplash image">
-        </div>
-        <div class="col-4">
-            <img class="w-100" src="https://images.unsplash.com/photo-1593642532400-2682810df593?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80" alt="unsplash image">
-        </div>
+       @endforeach
+
+
     </div>
 </div>
 @endsection
