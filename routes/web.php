@@ -20,6 +20,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/profile/{user}', [App\Http\Controllers\ProfilesController::class, 'index'])->name('show');
+Route::get('/profile/{user}/edit', [App\Http\Controllers\ProfilesController::class, 'edit'])->name('edit');
+Route::patch('/profile/{user}', [App\Http\Controllers\ProfilesController::class, 'update'])->name('update');
 
 Route::post('/post', [App\Http\Controllers\PostsController::class, 'store'])->name('store');
 Route::get('/post/create', [App\Http\Controllers\PostsController::class, 'create'])->name('create');
