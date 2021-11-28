@@ -17,6 +17,7 @@ class ProfilesController extends Controller
 
     public function edit(\App\Models\User $user) {
 
+        $this->authorize('update', $user->profile);
         return view('profiles.edit', [
             'user' => $user,
         ]);
@@ -24,6 +25,7 @@ class ProfilesController extends Controller
 
     public function update(\App\Models\User $user) {
 
+        $this->authorize('update', $user->profile);
         $data = request()->validate([
             'title' => 'required',
             'description' => 'required',
