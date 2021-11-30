@@ -17,4 +17,8 @@ class Profile extends Model
     public function profileImage() {
         return ($this->image) ? '/storage/' . $this->image : '/storage/profile/default.png';
     }
+
+    public function followers() {
+        return $this->belongsToMany(User::class);
+    }
 }
