@@ -16,7 +16,7 @@
 
 ![Screen Shot](https://i.ibb.co/fqHtxB6/logo.jpg)
 
-This is a cloned version of instagram, i did created this project to practice my knowledge on laravel framework.
+This is a cloned version of instagram, i did created this project to practice my knowledge on laravel framework, i didn't focus on Ux and designs.
 
 ## Built With
 
