@@ -10,7 +10,6 @@
   </p>
 </p>
 
-![Downloads](https://img.shields.io/github/downloads/Wetas/instagram-clone/total) ![Contributors](https://img.shields.io/github/contributors/Wetas/instagram-clone?color=dark-green) ![Issues](https://img.shields.io/github/issues/Wetas/instagram-clone) ![License](https://img.shields.io/github/license/Wetas/instagram-clone) 
 
 ## About The Project
 
